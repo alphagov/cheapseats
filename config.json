@@ -1,9 +1,10 @@
 {
   "baseUrl": "http://spotlight.perfplat.dev/performance/",
-  "timeout": "30000",
+  "timeout": 30000,
   "reporter": "spec",
   "stubDir": "/app/support/stagecraft_stub/responses/",
   "repo": "https://github.com/alphagov/spotlight.git",
   "port": 5555,
-  "path": "./tmp/nodegit-clone-demo"
+  "path": "./tmp/nodegit-clone-demo",
+  "slow": 2000
 }
