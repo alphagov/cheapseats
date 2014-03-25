@@ -29,7 +29,7 @@ browser.init()
   .then(spotlight.init(config))
   .then(spotlight.dashboards)
   .then(function (dashboards) {
-    var dashboardTests = Mocha.Suite.create(mocha.suite, 'Dashboard Exists');
+    var dashboardTests = Mocha.Suite.create(mocha.suite, 'Dashboards Exist');
     dashboards.forEach(function (dashboard) {
       dashboardTests.addTest(new Mocha.Test(dashboard.title, require('./lib/modules/dashboard-exists')(browser, dashboard, config.baseUrl)));
     });
