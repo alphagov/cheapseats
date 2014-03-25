@@ -29,9 +29,18 @@ browser.init()
   .then(spotlight.init(config))
   .then(spotlight.dashboards)
   .then(function (dashboards) {
-    var dashboardTests = Mocha.Suite.create(mocha.suite, 'Dashboards Exist');
+    var dashboardTests = Mocha.Suite.create(mocha.suite, 'Dashboards');
     dashboards.forEach(function (dashboard) {
-      dashboardTests.addTest(new Mocha.Test(dashboard.title, require('./lib/modules/dashboard-exists')(browser, dashboard, config.baseUrl)));
+
+      var dashboardSuite = Mocha.Suite.create(dashboardTests, dashboard.title),
+          moduleSuite = Mocha.Suite.create(dashboardSuite, 'modules');
+
+      dashboardSuite.addTest(new Mocha.Test('exists', require('./lib/modules/dashboard-exists')(browser, dashboard, config.baseUrl)));
+
+      dashboard.modules.forEach(function (module) {
+        moduleSuite.addTest(new Mocha.Test(module.slug, require('./lib/modules/modules-exist')(browser, module, config.baseUrl)));
+      });
+
     });
   })
   .then(function () {
