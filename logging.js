@@ -10,4 +10,4 @@ module.exports = function (browser) {
   browser.on('http', function(meth, path, data) {
     debug(meth.magenta, path, (data || '').grey);
   });
-}
+};
