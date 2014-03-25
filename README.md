@@ -7,6 +7,8 @@ Cheapseats is designed build functional tests against the dashboards defined in 
 
 ## Installing ##
 
+By default cheapseats runs against phantomjs on port 5555. You will need to [install phantom](http://phantomjs.org/download.html) (`brew update && brew install phantomjs`) and start it using `phantomjs --webdriver 5555`.
+
 Ensure you follow the [nodegit](https://github.com/nodegit/nodegit) install instructions.
 
 For everything else ```npm install``` will suffice.
