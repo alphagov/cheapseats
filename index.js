@@ -17,7 +17,8 @@ chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 
 var mocha = new Mocha({
   reporter: config.reporter,
-  timeout: config.timeout
+  timeout: config.timeout,
+  slow: config.slow
 });
 
 var browser = wd.promiseChainRemote({port: config.port});
