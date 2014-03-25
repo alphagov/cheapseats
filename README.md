@@ -9,7 +9,7 @@ Cheapseats is designed build functional tests against the dashboards defined in 
 
 Ensure you follow the [nodegit](https://github.com/nodegit/nodegit) install instructions.
 
-For everything else ```npm install``` will surfice.
+For everything else ```npm install``` will suffice.
 
 ## Running ##
 
