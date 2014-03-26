@@ -1,13 +1,13 @@
 var wd = require('wd'),
     chai = require('chai'),
     chaiAsPromised = require('chai-as-promised'),
-    enableWDLogging = require('./logging'),
-    spotlight = require('./spotlight'),
     Q = require('q'),
     Mocha = require('mocha'),
-    config = require('./config'),
     argh = require('argh'),
-    util = require('util');
+    util = require('util'),
+    config = require('./config'),
+    enableWDLogging = require('./lib/logging'),
+    spotlight = require('./lib/spotlight');
 
 util._extend(config, argh.argv);
 
