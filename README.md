@@ -1,8 +1,10 @@
 # Cheapseats #
 
-Dynamic functional test suite for spotlight using wd and mocha.
+Dynamic functional test suite for spotlight using webdriver and mocha.
 
-Cheapseats is designed build functional tests against the dashboards defined in [spotlight](https://github.com/alphagov/spotlight)
+Cheapseats is designed build functional tests against the dashboards defined in [spotlight](https://github.com/alphagov/spotlight) and test them using webdriver.
+
+It does this by checking out spotlight and building tests based on spotlight json dashboards.
 
 
 ## Installing ##
@@ -19,17 +21,6 @@ For everything else ```npm install``` will suffice.
 
 you can also configure it with command line args for example
 
-```node index.js --reporter nyan```
+```node index.js --reporter nyan --port 4444```
 
-
-## Problem? ##
-
-### It wont install ###
-
-It's probably nodegit read the install instructions [here](https://github.com/nodegit/nodegit)
-
-It says ```Error: connect ECONNREFUSED```? Are you running selenium or phantom? Is the port correct?
-
-### But I want it to check out a specific version of spotlight? ###
-
-This is coming but it's not written yet...
+If the application doesn't start and you recieve the error ```Error: connect ECONNREFUSED``` check that you are running a webdriver (selenium, phantomjs, etc) on the correct port.
