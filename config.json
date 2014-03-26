@@ -5,6 +5,6 @@
   "stubDir": "/app/support/stagecraft_stub/responses/",
   "repo": "https://github.com/alphagov/spotlight.git",
   "port": 5555,
-  "path": "./tmp/nodegit-clone-demo",
+  "path": "./tmp/spotlight",
   "slow": 2000
 }
