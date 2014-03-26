@@ -22,6 +22,8 @@ var mocha = new Mocha({
   slow: config.slow
 });
 
+require('./lib/wd-helpers')(wd, config);
+
 var browser = wd.promiseChainRemote({port: config.port});
 
 enableWDLogging(browser);
