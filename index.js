@@ -1,6 +1,6 @@
 var wd = require('wd'),
-    chai = require("chai"),
-    chaiAsPromised = require("chai-as-promised"),
+    chai = require('chai'),
+    chaiAsPromised = require('chai-as-promised'),
     enableWDLogging = require('./logging'),
     spotlight = require('./spotlight'),
     Q = require('q'),
