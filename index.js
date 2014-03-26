@@ -7,7 +7,8 @@ var wd = require('wd'),
     util = require('util'),
     config = require('./config'),
     enableWDLogging = require('./lib/logging'),
-    spotlight = require('./lib/spotlight');
+    spotlight = require('./lib/spotlight'),
+    dashboardTest = require('./lib/tests/dashboard');
 
 util._extend(config, argh.argv);
 
@@ -29,11 +30,9 @@ browser.init()
   .then(spotlight.init(config))
   .then(spotlight.dashboards)
   .then(function (dashboards) {
-    var dashboardTests = Mocha.Suite.create(mocha.suite, 'Dashboards');
+    var suite = Mocha.Suite.create(mocha.suite, 'Dashboards');
     dashboards.forEach(function (dashboard) {
-      var suite = Mocha.Suite.create(dashboardTests, dashboard.title);
-
-      require('./lib/tests/dashboard')(browser, dashboard, suite, config);
+      dashboardTest(browser, dashboard, suite, config);
     });
   })
   .then(function () {
