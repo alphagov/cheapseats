@@ -7,5 +7,6 @@
   "port": 5555,
   "path": "./tmp/spotlight",
   "slow": 2000,
-  "ignore": ["no-realistic-dashboard.json"]
+  "ignore": ["no-realistic-dashboard.json"],
+  "force": false
 }
