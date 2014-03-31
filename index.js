@@ -19,7 +19,8 @@ chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 var mocha = new Mocha({
   reporter: config.reporter,
   timeout: config.timeout,
-  slow: config.slow
+  slow: config.slow,
+  grep: argh.argv.grep
 });
 
 require('./lib/wd-helpers')(wd, config);
