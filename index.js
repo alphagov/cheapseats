@@ -29,6 +29,10 @@ var browser = wd.promiseChainRemote({port: config.port});
 
 enableWDLogging(browser);
 
+if(config.reporter === 'json') {
+  console.log = function () {};
+}
+
 browser.init()
   .then(spotlight.init(config))
   .then(spotlight.dashboards)
