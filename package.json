@@ -13,14 +13,14 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "wd": "0.2.13",
+    "wd": "0.2.14",
     "chai": "1.9.1",
     "chai-as-promised": "4.1.1",
     "q": "1.0.1",
     "nodegit": "0.1.1",
     "rimraf": "2.2.6",
     "underscore": "1.6.0",
-    "debug": "0.7.4",
+    "debug": "0.8.0",
     "mocha": "1.18.2",
     "argh": "0.1.1"
   }
