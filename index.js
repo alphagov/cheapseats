@@ -43,5 +43,4 @@ browser.init()
   })
   .fin(function () {
     return browser.quit();
-  })
-  .done();
+  });
