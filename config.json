@@ -10,5 +10,7 @@
   "slow": 2000,
   "ignore": ["no-realistic-dashboard.json"],
   "force": false,
-  "backdropUrl": null
+  "serverConfig": {
+    "backdropUrl": "https://www.preview.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
+  }
 }
