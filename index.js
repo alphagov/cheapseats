@@ -33,7 +33,7 @@ if(config.reporter === 'json') {
   console.log = function () {};
 }
 
-browser.init()
+browser.init({javascriptEnabled: config.javascriptEnabled})
   .then(spotlight.init(config))
   .then(spotlight.dashboards)
   .then(function (dashboards) {
