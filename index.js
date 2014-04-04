@@ -25,16 +25,25 @@ var mocha = new Mocha({
 
 require('./lib/wd-helpers')(wd, config);
 
-var browser = wd.promiseChainRemote({port: config.port});
+var browser = wd.promiseChainRemote({port: config.port}),
+  server;
 
 enableWDLogging(browser);
 
-if(config.reporter === 'json') {
+if (config.reporter === 'json') {
   console.log = function () {};
 }
 
 browser.init()
   .then(spotlight.init(config))
+  .then(function () {
+    if (!config.baseUrl || config.standalone) {
+      return require('./lib/server')(config).then(function (response) {
+        server = response.server;
+        config.baseUrl = response.url;
+      });
+    }
+  })
   .then(spotlight.dashboards)
   .then(function (dashboards) {
     var suite = Mocha.Suite.create(mocha.suite, 'Dashboards');
@@ -46,5 +55,6 @@ browser.init()
     return Q.ninvoke(mocha, 'run');
   })
   .fin(function () {
+    if (server) { server.kill(); }
     return browser.quit();
   });

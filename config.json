@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://spotlight.perfplat.dev/performance/",
+  "standalone": true,
   "timeout": 30000,
   "reporter": "spec",
   "stubDir": "/app/support/stagecraft_stub/responses/",
@@ -8,5 +9,9 @@
   "path": "./tmp/spotlight",
   "slow": 2000,
   "ignore": ["no-realistic-dashboard.json"],
-  "force": false
+  "force": false,
+  "serverConfig": {
+    "port": 7070,
+    "backdropUrl": "https://www.preview.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
+  }
 }
