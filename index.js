@@ -10,7 +10,10 @@ var wd = require('wd'),
     spotlight = require('./lib/spotlight'),
     dashboardTest = require('./lib/tests/dashboard');
 
+config.path = require('path').resolve(__dirname, config.path);
+
 util._extend(config, argh.argv);
+
 
 chai.use(chaiAsPromised);
 chai.should();
