@@ -1,6 +1,6 @@
 {
   "baseUrl": "http://spotlight.perfplat.dev/performance/",
-  "standalone": true,
+  "standalone": false,
   "timeout": 30000,
   "reporter": "spec",
   "stubDir": "/app/support/stagecraft_stub/responses/",
