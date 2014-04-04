@@ -59,10 +59,12 @@ driver.init(browser, config)
     exitcode = 1;
   })
   .fin(function () {
-    driver.kill();
-    server.kill();
     return browser.quit();
   })
   .then(function () {
+    driver.kill();
+    server.kill();
+  })
+  .fin(function () {
     process.exit(exitcode);
   });
