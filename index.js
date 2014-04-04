@@ -28,7 +28,7 @@ var mocha = new Mocha({
 require('./lib/wd-helpers')(wd, config);
 
 var browser = wd.promiseChainRemote({port: config.port}),
-  server;
+  exitcode = 1;
 
 enableWDLogging(browser);
 
@@ -53,8 +53,16 @@ driver.init(browser, config)
   .then(function () {
     return Q.ninvoke(mocha, 'run');
   })
+  .then(function () {
+    exitcode = 0;
+  }, function () {
+    exitcode = 1;
+  })
   .fin(function () {
     driver.kill();
     server.kill();
     return browser.quit();
+  })
+  .then(function () {
+    process.exit(exitcode);
   });
