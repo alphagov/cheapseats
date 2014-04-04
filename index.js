@@ -8,6 +8,8 @@ var wd = require('wd'),
     config = require('./config'),
     enableWDLogging = require('./lib/logging'),
     spotlight = require('./lib/spotlight'),
+    driver = require('./lib/driver'),
+    server = require('./lib/server'),
     dashboardTest = require('./lib/tests/dashboard');
 
 util._extend(config, argh.argv);
@@ -34,14 +36,11 @@ if (config.reporter === 'json') {
   console.log = function () {};
 }
 
-browser.init()
+driver.init(browser, config)
   .then(spotlight.init(config))
   .then(function () {
     if (!config.baseUrl || config.standalone) {
-      return require('./lib/server')(config).then(function (response) {
-        server = response.server;
-        config.baseUrl = response.url;
-      });
+      return server.start(config);
     }
   })
   .then(spotlight.dashboards)
@@ -55,6 +54,7 @@ browser.init()
     return Q.ninvoke(mocha, 'run');
   })
   .fin(function () {
-    if (server) { server.kill(); }
+    driver.kill();
+    server.kill();
     return browser.quit();
   });
