@@ -7,7 +7,7 @@
   "repo": "https://github.com/alphagov/spotlight.git",
   "port": 5555,
   "path": "./tmp/spotlight",
-  "slow": 2000,
+  "slow": 5000,
   "ignore": ["no-realistic-dashboard.json"],
   "force": false,
   "serverConfig": {
