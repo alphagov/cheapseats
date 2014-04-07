@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://spotlight.perfplat.dev/performance/",
+  "baseUrl": "http://localhost:3057/performance/",
   "standalone": false,
   "timeout": 30000,
   "reporter": "spec",
