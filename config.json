@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://localhost:3057/performance/",
+  "clone": false,
   "standalone": false,
   "timeout": 30000,
   "reporter": "spec",
