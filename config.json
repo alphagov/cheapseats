@@ -9,7 +9,7 @@
   "port": 5555,
   "path": "./tmp/spotlight",
   "slow": 5000,
-  "ignore": ["no-realistic-dashboard.json"],
+  "ignore": ["no-realistic-dashboard.json", "student-finance.json"],
   "force": false,
   "serverConfig": {
     "port": 7070,
