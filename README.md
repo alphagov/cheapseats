@@ -9,11 +9,9 @@ It does this by building tests based on spotlight json dashboards.
 
 ## Installing ##
 
-By default cheapseats runs against phantomjs on port 5555. You will need to [install phantom](http://phantomjs.org/download.html) (`brew update && brew install phantomjs`).
+```npm install```
 
 Ensure you follow the [nodegit](https://github.com/nodegit/nodegit) install instructions.
-
-For everything else ```npm install``` will suffice.
 
 ## Running ##
 
