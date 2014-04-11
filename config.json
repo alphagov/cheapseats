@@ -11,6 +11,8 @@
   "slow": 5000,
   "ignore": ["no-realistic-dashboard.json", "student-finance.json"],
   "force": false,
+  "browserWidth": 1024,
+  "browserHeight": 800,
   "serverConfig": {
     "port": 7070,
     "backdropUrl": "https://www.preview.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
