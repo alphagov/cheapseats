@@ -15,7 +15,7 @@ Ensure you follow the [nodegit](https://github.com/nodegit/nodegit) install inst
 
 ## Running ##
 
-```npm start```
+```node index.js```
 
 you can also configure it with command line args for example
 
@@ -30,7 +30,8 @@ Common configuration options are listed below, these can be set in config.json, 
 * `--baseUrl` - the server to run tests against.
 * `--standalone` - cheapseats will spin up its own instance of spotlight (and phantomj, if required) to run tests against, instead of using the server provided in `--baseUrl`.
 * `--screenshots` - directory to save a screenshot of each dashboard into. A falsy value will disable screenshots.
-* `--path` - cheapseats will look here for an instance of spotlight. If it finds an empty directory, it will clone spotlight/master into this directory.
+* `--path` - cheapseats will look here for an instance of spotlight.
+* `--clone` - if cheapseats finds an empty directory at the location provided in `--path`, it will clone spotlight/master into this directory (Note: needs node-git to be installed).
 * `--force` - will make cheapseats *always* clone spotlight into the path provided, overwriting anything in that directory. *Use with care*
 * `--port` - the port on which cheapseats will look for a webdriver compatible interface (e.g. phantomjs, selenium). By default phantomjs will run on 5555 and selenium will run on 4444. Note that standalone mode will *always* attempt to start phantomjs on the port specified if no instance is found.
 * `--grep`, `--timeout`, `--slow`, `--reporter` - options passed to mocha. See http://visionmedia.github.io/mocha/#usage for usage.
