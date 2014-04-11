@@ -15,7 +15,7 @@ Ensure you follow the [nodegit](https://github.com/nodegit/nodegit) install inst
 
 ## Running ##
 
-```./cheapseats```
+`./cheapseats`
 
 you can also configure it with command line args for example
 
