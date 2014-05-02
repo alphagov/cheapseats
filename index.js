@@ -5,6 +5,7 @@ var wd = require('wd'),
     Mocha = require('mocha'),
     argh = require('argh'),
     util = require('util'),
+    _ = require('underscore'),
     config = require('./config'),
     enableWDLogging = require('./lib/logging'),
     spotlight = require('./lib/spotlight'),
@@ -36,19 +37,34 @@ if (config.reporter === 'json') {
   console.log = function () {};
 }
 
+function testDashboards(config, prefix) {
+  prefix = prefix || '';
+  var title = [prefix, 'Dashboards'].join(' ');
+  return spotlight.init(config)()
+    .then(spotlight.dashboards)
+    .then(function (dashboards) {
+      var suite = Mocha.Suite.create(mocha.suite, title);
+      dashboards.forEach(function (dashboard) {
+        dashboardTest(browser, dashboard, suite, config);
+      });
+    });
+}
+
 driver.init(browser, config)
-  .then(spotlight.init(config))
   .then(function () {
     if (!config.baseUrl || config.standalone) {
       return server.start(config);
     }
   })
-  .then(spotlight.dashboards)
-  .then(function (dashboards) {
-    var suite = Mocha.Suite.create(mocha.suite, 'Dashboards');
-    dashboards.forEach(function (dashboard) {
-      dashboardTest(browser, dashboard, suite, config);
-    });
+  .then(function () {
+    if (argh.argv.experimental) {
+      return testDashboards(_.extend({}, config, {
+        baseUrl: config.baseUrl + 'experimental/',
+        stubDir: config.stubDir + 'experimental/'
+      }), 'Experimental');
+    } else {
+      return testDashboards(config);
+    }
   })
   .then(function () {
     return Q.ninvoke(mocha, 'run');
