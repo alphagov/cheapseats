@@ -58,9 +58,10 @@ driver.init(browser, config)
   })
   .then(function () {
     if (argh.argv.experimental) {
+      var experimental = (typeof argh.argv.experimental === 'string') ? argh.argv.experimental : 'experimental';
       return testDashboards(_.extend({}, config, {
-        baseUrl: config.baseUrl + 'experimental/',
-        stubDir: config.stubDir + 'experimental/'
+        baseUrl: config.baseUrl + experimental + '/',
+        stubDir: config.stubDir + experimental + '/'
       }), 'Experimental');
     } else {
       return testDashboards(config);
