@@ -49,7 +49,7 @@ function testDashboards(config, prefix) {
       });
     });
 }
-config.valueRegex = /^((£)?[0-9\.]+[bmk]?)|\(?no data\)?$/;
+config.valueRegex = /^(((£)?[0-9\.]+(bn|m|k)?)|\(?no data\)?)$/;
 
 driver.init(browser, config)
   .then(function () {
