@@ -15,6 +15,6 @@
   "browserHeight": 800,
   "serverConfig": {
     "port": 7070,
-    "backdropUrl": "https://www.preview.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
+    "backdropUrl": "https://www.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
   }
 }
