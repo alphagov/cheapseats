@@ -43,9 +43,20 @@ function testDashboards(config, prefix) {
   return spotlight.init(config)()
     .then(spotlight.dashboards)
     .then(function (dashboards) {
+
+      var range = (argh.argv.range || '').split('..');
+      range[0] = parseInt(range[0], 10) || 0;
+      if (range.length === 1) {
+        range[1] = range[0] + 1;
+      } else {
+        range[1] = range[1] ? parseInt(range[1], 10) : dashboards.length;
+      }
+
       var suite = Mocha.Suite.create(mocha.suite, title);
-      dashboards.forEach(function (dashboard) {
-        dashboardTest(browser, dashboard, suite, config);
+      dashboards.forEach(function (dashboard, i) {
+        if (i >= range[0] && i < range[1]) {
+          dashboardTest(browser, dashboard, suite, config);
+        }
       });
     });
 }
