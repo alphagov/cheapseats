@@ -23,6 +23,7 @@ var mocha = new Mocha({
   reporter: config.reporter,
   timeout: config.timeout,
   slow: config.slow,
+  bail: config.bail,
   grep: argh.argv.grep
 });
 
