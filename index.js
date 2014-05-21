@@ -46,7 +46,7 @@ function testDashboards(config, prefix) {
 
       var range = (argh.argv.range || '').split('..');
       range[0] = parseInt(range[0], 10) || 0;
-      if (range.length === 1) {
+      if (range.length === 1 && argh.argv.range) {
         range[1] = range[0] + 1;
       } else {
         range[1] = range[1] ? parseInt(range[1], 10) : dashboards.length;
