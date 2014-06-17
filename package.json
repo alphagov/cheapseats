@@ -21,8 +21,8 @@
     "mocha": "1.18.2",
     "argh": "0.1.1",
     "ps-node": "0.0.3",
-    "phantomjs": "1.9.7-3",
-    "glob": "3.2.9"
+    "glob": "3.2.9",
+    "phantomjs": "^1.9.7-8"
   },
   "devDependencies": {
     "nodegit": "0.1.1"
