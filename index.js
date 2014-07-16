@@ -62,6 +62,7 @@ function testDashboards(config, prefix) {
     });
 }
 config.valueRegex = /^(((£)?[0-9\.,]+(bn|m|k|%)?)|\(?no data\)?)$/;
+config.durationRegex = /^(([0-9]+m )?([0-9]+s)?|\(?no data\)?)$/;
 
 driver.init(browser, config)
   .then(function () {
