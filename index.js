@@ -63,6 +63,8 @@ function testDashboards(config, prefix) {
 }
 config.valueRegex = /^(((£)?[0-9\.,]+(bn|m|k|%)?)|\(?no data\)?)$/;
 config.durationRegex = /^(([0-9]+m )?([0-9]+s)?|\(?no data\)?)$/;
+config.dateRegex = /(\d{1,2} )?(Jan|Feb|Mar|Apr|May|June|July|Aug|Sep|Oct|Nov|Dec) (19\d{2}|2\d{3})/;
+config.monthRegex = /(January|Febuary|March|April|May|June|July|August|September|October|November|December) (19\d{2}|2\d{3})/;
 
 driver.init(browser, config)
   .then(function () {
