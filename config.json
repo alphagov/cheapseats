@@ -3,7 +3,7 @@
   "clone": false,
   "standalone": false,
   "timeout": 30000,
-  "reporter": "spec",
+  "reporter": "spec-retry",
   "stubGlob": "/app/support/stagecraft_stub/responses/**/*.json",
   "repo": "https://github.com/alphagov/spotlight.git",
   "port": 5555,

@@ -22,7 +22,8 @@
     "q": "1.0.1",
     "rimraf": "2.2.8",
     "underscore": "1.6.0",
-    "wd": "0.3.4"
+    "wd": "0.3.4",
+    "mocha-extra-shot": "0.0.5"
   },
   "devDependencies": {
     "nodegit": "0.1.1"
