@@ -31,8 +31,8 @@ Common configuration options are listed below, these can be set in config.json, 
 * `--standalone` - cheapseats will spin up its own instance of spotlight (and phantomj, if required) to run tests against, instead of using the server provided in `--baseUrl`.
 * `--screenshots` - directory to save a screenshot of each dashboard into. A falsy value will disable screenshots.
 * `--path` - cheapseats will look here for an instance of spotlight.
-* `--clone` - if cheapseats finds an empty directory at the location provided in `--path`, it will clone spotlight/master into this directory (Note: needs node-git to be installed).
 * `--force` - will make cheapseats *always* clone spotlight into the path provided, overwriting anything in that directory. *Use with care*
+* `--dashboardList` - The stagecraft environment to download the dashboards from default is production.
 * `--port` - the port on which cheapseats will look for a webdriver compatible interface (e.g. phantomjs, selenium). By default phantomjs will run on 5555 and selenium will run on 4444. Note that standalone mode will *always* attempt to start phantomjs on the port specified if no instance is found.
 * `--browserWidth`, `--browserHeight` - the dimensions of the browser window used to test the site.
 * `--grep`, `--timeout`, `--slow`, `--reporter` - options passed to mocha. See http://visionmedia.github.io/mocha/#usage for usage.

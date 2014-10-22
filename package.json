@@ -17,15 +17,13 @@
     "debug": "1.0.4",
     "glob": "4.0.5",
     "mocha": "1.21.3",
+    "mocha-extra-shot": "0.0.5",
     "phantomjs": "1.9.7-15",
     "ps-node": "0.0.3",
     "q": "1.0.1",
+    "request": "2.45.0",
     "rimraf": "2.2.8",
     "underscore": "1.6.0",
-    "wd": "0.3.4",
-    "mocha-extra-shot": "0.0.5"
-  },
-  "devDependencies": {
-    "nodegit": "0.1.1"
+    "wd": "0.3.4"
   }
 }
