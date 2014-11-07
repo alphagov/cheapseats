@@ -42,9 +42,10 @@ function testDashboards(config, prefix) {
   prefix = prefix || '';
   var title = [prefix, 'Dashboards'].join(' ');
   return spotlight.init(config)()
-    .then(spotlight.dashboards)
+    .then(function() {
+      return spotlight.dashboards(config.dashboard);
+    })
     .then(function (dashboards) {
-
       var range = (argh.argv.range || '').split('..');
       range[0] = parseInt(range[0], 10) || 0;
       if (range.length === 1 && argh.argv.range) {
