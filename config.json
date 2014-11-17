@@ -16,5 +16,6 @@
     "port": 7070,
     "backdropUrl": "https://www.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
   },
-  "unpublished": false
+  "unpublished": false,
+  "path": "../spotlight"
 }
