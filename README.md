@@ -21,7 +21,7 @@ you can also configure it with command line args for example
 
 ```./cheapseats --reporter nyan --port 4444```
 
-If the application doesn't start and you recieve the error ```Error: connect ECONNREFUSED``` check that you are running a webdriver (selenium, phantomjs, etc) on the correct port.
+If the application doesn't start and you receive the error ```Error: connect ECONNREFUSED``` check that you are running a webdriver (selenium, phantomjs, etc) on the correct port.
 
 ### Configuration ###
 
