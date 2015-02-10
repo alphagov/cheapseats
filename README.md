@@ -23,6 +23,29 @@ you can also configure it with command line args for example
 
 If the application doesn't start and you receive the error ```Error: connect ECONNREFUSED``` check that you are running a webdriver (selenium, phantomjs, etc) on the correct port.
 
+### Running locally using Selenium
+This can be an alternative if you have problems running the test suite with PhantomJS.
+
+Install Firefox browser. Then selenium server:
+
+```
+npm install -g selenium-server
+```
+
+then from the cheapseats directory
+
+```
+selenium & ./cheapseats --port 4444
+```
+
+### Running tests for a single dashboard
+
+To run a reduced set of cheapseats tests for a single dashboard, use:
+
+```
+node_modules/cheapseats/cheapseats --grep <dashboard-slug>
+```
+
 ### Configuration ###
 
 Common configuration options are listed below, these can be set in config.json, or when running from node directly as command line arguments:
