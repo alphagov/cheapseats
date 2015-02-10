@@ -43,7 +43,7 @@ selenium & ./cheapseats --port 4444
 To run a reduced set of cheapseats tests for a single dashboard, use:
 
 ```
-node_modules/cheapseats/cheapseats --grep <dashboard-slug>
+./cheapseats --grep <dashboard-slug>
 ```
 
 ### Configuration ###
