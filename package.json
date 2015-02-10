@@ -21,7 +21,7 @@
     "phantomjs": "1.9.7-15",
     "ps-node": "0.0.3",
     "q": "1.0.1",
-    "request": "2.45.0",
+    "requestretry": "1.2.2",
     "rimraf": "2.2.8",
     "underscore": "1.6.0",
     "wd": "0.3.4"
