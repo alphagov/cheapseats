@@ -66,5 +66,12 @@ Common configuration options are listed below, these can be set in config.json, 
 
 If no baseUrl is set in the configuration, or the `--standalone` argument is provided then cheapseats will start the services it needs to run.
 
-This includes an instance of spotlight, with configuration options provided in config.json `serverConfig` property, and phantomjs on port 5555.
+This includes an instance of spotlight, with configuration options provided in config.json `serverConfig` property, and phantomjs (version 1.9.x) on port 5555.
 
+### OSX Yosemite ###
+
+Assertions randomly fail when using phantomjs (1.9.x) and cheapseats in OSX Yosemite. If you need to run cheapseats in this environment then you can either install phantomjs 2.x or run cheapseats using selenium.
+
+Phantomjs (2.0.x) can be installed using homebrew ```brew install phantomjs```
+
+Then to run with phantomjs ```phantomjs --webdriver=5555 & ./cheapseats```
