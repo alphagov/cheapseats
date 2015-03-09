@@ -74,6 +74,7 @@ driver.init(browser, config)
     }
   })
   .then(function () {
+    config.quickRun = argh.argv.quickrun;
     return testDashboards(config);
   })
   .then(function () {
