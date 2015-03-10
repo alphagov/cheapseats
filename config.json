@@ -5,8 +5,16 @@
   "reporter": "spec-retry",
   "stubGlob": "*.json",
   "port": 5555,
-  "dashboardPath": "./dashboards/",
-  "dashboardList": "https://stagecraft.production.performance.service.gov.uk/public/dashboards",
+  "downloadFolder": "./dashboards/",
+  "dashboardsUrl": "https://stagecraft.production.performance.service.gov.uk/public/dashboards",
+  "dashboardSlugs": [
+    "student-finance-england-full-time-study-applications",
+    "book-practical-driving-test",
+    "carers-allowance",
+    "dh-organ-donor-register-registrations",
+    "dwp-income-support-claims-maintained",
+    "x-ee17e583b903750babc8f379dfa1494f"
+  ],
   "slow": 5000,
   "ignore": ["no-realistic-dashboard.json"],
   "force": false,
