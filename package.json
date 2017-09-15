@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/alphagov/cheapseats.git"
   },
+  "engines": {
+    "node": "6.11.3"
+  },
   "bin": "./cheapseats",
   "private": true,
   "license": "MIT",
@@ -18,7 +21,7 @@
     "glob": "4.0.5",
     "mocha": "1.21.3",
     "mocha-extra-shot": "0.0.5",
-    "phantomjs": "1.9.7-15",
+    "phantomjs": "2.1.7",
     "ps-node": "0.0.3",
     "q": "1.0.1",
     "requestretry": "1.2.2",
