@@ -6,7 +6,7 @@
   "stubGlob": "*.json",
   "port": 5555,
   "downloadFolder": "./dashboards/",
-  "dashboardsUrl": "https://stagecraft.production.performance.service.gov.uk/public/dashboards",
+  "dashboardsUrl": "https://performance-platform-stagecraft-staging.cloudapps.digital/public/dashboards",
   "dashboardSlugs": [
     "student-finance-england-full-time-study-applications",
     "book-practical-driving-test",
@@ -22,7 +22,7 @@
   "browserHeight": 800,
   "serverConfig": {
     "port": 7070,
-    "backdropUrl": "https://www.performance.service.gov.uk/data/{{ data-group }}/{{ data-type }}"
+    "backdropUrl": "https://performance-platform-backdrop-read-staging.cloudapps.digital/data/{{ data-group }}/{{ data-type }}"
   },
   "unpublished": false,
   "path": "../spotlight"
