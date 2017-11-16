@@ -2,7 +2,7 @@
   "baseUrl": "http://localhost:3057/performance/",
   "standalone": false,
   "timeout": 30000,
-  "reporter": "spec-retry",
+  "reporter": "spec",
   "stubGlob": "*.json",
   "port": 5555,
   "downloadFolder": "./dashboards/",

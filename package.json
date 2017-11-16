@@ -20,7 +20,6 @@
     "debug": "1.0.4",
     "glob": "4.0.5",
     "mocha": "1.21.3",
-    "mocha-extra-shot": "0.0.5",
     "phantomjs": "2.1.7",
     "ps-node": "0.0.3",
     "q": "1.0.1",
