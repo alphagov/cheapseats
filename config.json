@@ -6,7 +6,7 @@
   "stubGlob": "*.json",
   "port": 5555,
   "downloadFolder": "./dashboards/",
-  "dashboardsUrl": "https://performance-platform-stagecraft-staging.cloudapps.digital/public/dashboards",
+  "dashboardsUrl": "https://performance-platform-stagecraft-production.cloudapps.digital/public/dashboards",
   "dashboardSlugs": [
     "student-finance-england-full-time-study-applications",
     "book-practical-driving-test",
